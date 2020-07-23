@@ -1,0 +1,12 @@
+<h1 class="animated fadeIn fast">Buscado: <small>{{textoBuscar}}</small></h1>
+<hr>
+<div class="card-columns">
+    <!-- heroe.idx es una propiedad agregada en un metodo del servicio -->
+    <app-heroe-tarjeta [heroe]="heroe" [indice]="heroe.idx" *ngFor="let heroe of heroesObj"></app-heroe-tarjeta>
+</div>
+
+<div *ngIf="heroesObj.length == 0" class="row animated fadeIn">
+    <div class="alert alert-info col-md-12 alert-dismissible fade show" role="alert">
+        No se encuentran resultados por: <strong>'{{textoBuscar}}'</strong>
+    </div>
+</div>

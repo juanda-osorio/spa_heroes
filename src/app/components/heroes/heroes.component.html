@@ -1,0 +1,16 @@
+<h1>Héroes <small>Marvel y DC</small></h1>
+<hr>
+<div class="card-columns">
+    <!-- *ngFor="let heroe of heroes; let i = index" -->
+
+    <!-- con los corchetes, enviamos a la propiedad heroe (del heroe-tarjeta) con el valor hero del bucle for
+    definido en este componente.
+    [heroe]  ==> Es la variable definida en herore-tarjeta y que se espera. Lo que está al otro lado del igual 'hero' es lo definido en este componente heroes.
+    [indice] ==> Es la variable definida en herore-tarjeta y que se espera. Lo que está al otro lado del igual 'i' es lo definido en este componente heroes.
+
+    (heroeSeleccionado) ==> Es la propiedad definida en el hijo heroe-tarjeta
+    $event ==> es el parametro recibido que se está emitiendo desde la función del elemento Hijo heroe-tarjeta.component.verHeroe
+    EN ESTE MOMENTO, ESTE CODIGO QUE VIENE DEL HIJO, NO ESTÁ FUNCIONANDO (porque así se quiso) -->
+    <app-heroe-tarjeta (heroeSeleccionado)="verHeroe( $event )" [heroe]="hero" [indice]="i" *ngFor="let hero of heroes; let i = index"></app-heroe-tarjeta>
+
+</div>
